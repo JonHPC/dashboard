@@ -1,0 +1,252 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 1fr 1fr 7fr;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    background-color:#FFF7E6;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    box-shadow: 5px 5px 10px #92825c;
+    z-index: 10;
+    color: #664E4E;
+    display:grid;
+    padding:32px;
+    grid-template-columns: repeat(33, 1fr);
+    grid-template-rows: repeat(4, 36px);
+    height: 144px;
+}
+
+#search-icon{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#search{
+    grid-column: 2 / span 18;
+    grid-row: 1 / 2;
+    height: 24px;
+    color:#664E4E;
+    background-color:#FFE4AE;
+    border:2px solid #664E4E;
+    border-radius:8px;
+}
+input:focus, textarea{
+    outline:none !important;
+    border:2px solid #8AC4BE;
+}
+
+#search:hover{
+    border-color:#DB8F5D;
+}
+
+#bell-icon{
+    grid-column: 25 / 26;
+    grid-row: 1 / 2;
+}
+
+#s-profile-pic{
+    grid-column: 26 / 28;
+    grid-row: 1 / 2;
+}
+
+.small-pic{
+   max-width: 48px;
+}
+
+#s-name{
+    grid-column: 28 / 32;
+    grid-row: 1 / 2;
+}
+
+#header-spacer{
+    height:32px;
+    grid-column: 1 / 34;
+    grid-row: 2 / 3;
+}
+
+#m-profile-pic{
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+    max-width:80px;
+}
+
+#hi-there{
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+}
+
+#m-name{
+    grid-column: 4 / span 18;
+    grid-row: 3 / 5;
+}
+
+#new-button{
+    grid-column: 22 / 25;
+    grid-row: 4 / 5;
+}
+
+#upload-button{
+    grid-column: 26 / 29;
+    grid-row: 4 / 5;
+}
+
+#share-button{
+    grid-column: 30/ 33;
+    grid-row: 4 / 5;
+}
+
+.header>button{
+    background-color: #DB8F5D;
+    border:none;
+    color:#FFF7E6;
+    text-align: center;
+    vertical-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 32px;
+    transition: 0.3s;
+    border: 3px solid #DB8F5D;
+}
+
+.header>button:hover{
+    background-color:#FFF7E6;
+    color:#DB8F5D;
+}
+
+.sidebar{
+    background-color:#664E4E;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    color: #FFF7E6;
+}
+
+.sidebar>img{
+    max-width: 150px;
+    padding-left:12px;
+    padding-top:8px;
+}
+
+.sidebar>h2{
+    padding-left:16px;
+}
+
+#nav-table{
+    border-spacing:16px;
+}
+
+.sidebar-link, .card-icon, .header-icon{
+    transition:0.2s;
+}
+
+.sidebar-link:hover, .card-icon:hover, .header-icon:hover{
+    color:#DB8F5D;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.sidebar-lower{
+    background-color:#664E4E;
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+    color: #FFF7E6;
+    padding-top: 32px;
+}
+#settings-table{
+    border-spacing:16px;
+}
+
+.main{
+    background-color:#FFE4AE;
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+    z-index: 2;
+    color:#664E4E;
+    padding: 16px;
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 2fr;
+    gap:16px;
+    height:100%;
+}
+
+.projects-div{
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:16px;
+    grid-auto-rows:200px;
+}
+
+.card{
+    border-radius:8px;
+    background-color:#FFF7E6;
+    box-shadow:5px 5px 10px #92825c;
+    max-width:400px;
+    height:200px;
+    padding-left:16px;
+    padding-right:16px;
+    display:grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    border-left: 8px solid;
+    border-left-color: #8AC4BE;
+
+}
+
+.card>h3{
+    grid-column:1 / 2;
+    grid-row: 1 / 2;
+}
+
+.card>p{
+    grid-column:1 / 4;
+    grid-row: 2 / 3;
+    text-overflow: ellipsis;
+    overflow:scroll;
+}
+
+.card-icon-div{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+
+
+.announcements-div{
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background-color:#FFF7E6;
+    box-shadow:5px 5px 10px #92825c;
+    border-radius:8px;
+    padding:16px;
+    max-height: 425px;
+    max-width:300px;
+    overflow:scroll;
+    text-overflow: ellipsis;
+    min-width:200px;
+
+}
+
+.trending-div{
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    background-color:#FFF7E6;
+    box-shadow:5px 5px 10px #92825c;
+    border-radius:8px;
+    padding:16px;
+    overflow:scroll;
+    max-height: 500px;
+    max-width:300px;
+    min-width:200px;
+    
+}
